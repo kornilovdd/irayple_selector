@@ -126,9 +126,7 @@
                     resX = Number(document.getElementById("RX").value);
                     resY = Number(document.getElementById("RY").value);
 
-                    form = document.getElementById("results");
-
-                    form.style.display = "block";
+                    form = document.getElementById("results");                    
 
                     ratio = 0;
                     countFOVY = 0;
@@ -142,6 +140,7 @@
                         alert("Выберите модель устройства");
                         return "stop"
                     }
+                    form.style.display = "block";
                     if (Number(camModel.value < 9)) {
                         focal = Number(camModel.options[camModel.selectedIndex].getAttribute('lens'));
                     } else if (Number(camModel.value >= 9)) {
