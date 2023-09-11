@@ -47,7 +47,7 @@
               </script>
         </div>
         <div class="input-group">
-            <span class="input-group-text" style="width: 25%;">Разрешение</span>
+            <span class="input-group-text" style="width: 35%;">Разрешение</span>
             <input type="text" aria-label="X" class="form-control" id="RX" disabled style="text-align: center;">
             <input type="text" aria-label="Y" class="form-control" id="RY" disabled style="text-align: center;">
           </div>
@@ -126,6 +126,10 @@
                     resX = Number(document.getElementById("RX").value);
                     resY = Number(document.getElementById("RY").value);
 
+                    form = document.getElementById("results");
+
+                    form.style.display = "block";
+
                     ratio = 0;
                     countFOVY = 0;
                     countWD = 0;
@@ -169,10 +173,9 @@
             </script>
         </div>
 
+        
+    <div class="mb-3" id = "results" style="display: none;">
         <img src="https://drive.google.com/uc?export=view&id=1BJeeD0wfwBkcr93qPRM4fsCkah_Tyl3B" class="img-thumbnail" alt="...">
-    <div class="mb-3">
-        
-        
         <label for="exampleFormControlInput1" class="form-label"  style="margin-top: .5rem;">Высота области:</label>
         <div class="input-group">
             <span class="input-group-text" style="width: 25%;">FOV Y</span>
@@ -224,6 +227,8 @@
                 resX = document.getElementById("RX");
                 resY = document.getElementById("RY");
 
+                form = document.getElementById("results");
+
                 camModel.selectedIndex = "0";
                 resX.value = "";
                 resY.value = "";
@@ -237,6 +242,7 @@
                 ppe.value = "";
                 sizemm.value = "";
                 sizemil.value = "";
+                form.style.display = "none";
             }
         </script>
     
