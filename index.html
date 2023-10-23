@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="container-sm" style="max-width: 600px;" id="frm">
-        <img src="https://cdn-ru.bitrix24.ru/b16270182/landing/60a/60a94f63a2afbbb63b11d9d02f961ead/SP_AUTOMATION_2_1x.png" class="img-thumbnail" alt="..." style="width: 40%;">
+        <!-- <img src="https://cdn-ru.bitrix24.ru/b16270182/landing/60a/60a94f63a2afbbb63b11d9d02f961ead/SP_AUTOMATION_2_1x.png" class="img-thumbnail" alt="..." style="width: 40%;"> -->
         <!-- <img src="https://drive.google.com/file/d/1BJeeD0wfwBkcr93qPRM4fsCkah_Tyl3B/view?usp=drive_link" class="img-thumbnail" alt="..." style="width: 17%;"> -->
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label"  style="margin-top: .5rem;">Укажите модель:</label>
@@ -126,7 +126,9 @@
                     resX = Number(document.getElementById("RX").value);
                     resY = Number(document.getElementById("RY").value);
 
-                    form = document.getElementById("results");                    
+                    form = document.getElementById("results");
+
+                    
 
                     ratio = 0;
                     countFOVY = 0;
@@ -152,7 +154,7 @@
                     fovY.value = countFOVY;
 
                     cmosX = resX*3.75/1000;
-                    countWD = Math.floor(focal*(cmosX+1));
+                    countWD = Math.floor(focal*(fovx.value/cmosX+1));
                     WD.value = countWD;
 
                     accuracyPXmm = Math.floor(resX/Number(fovX.value));
